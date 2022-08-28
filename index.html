@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="wrap-content">
+      <div class="header">
+        <div class="city-search-container">
+          <i class="search-icon fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="city-search" placeholder="Enter City Name" autofocus>
+        </div>
+        <!-- Search bar -->
+      </div>
+      <div class="content">
+        <div class="current-weather-container">
+          <div class="general-information">
+            <div class="status" data-status>Enter A Location</div>
+            <div class="location" data-location>To Find The Weather</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail">
+              <div class="title">Temperature</div>
+              <div class="value" data-temperature>TBD</div>
+            </div>
+            <div class="detail">
+              <div class="title">Humidity</div>
+              <div class="value" data-humidity>TBD</div>
+            </div>
+            <div class="detail">
+              <div class="title">Visibility</div>
+              <div class="value" data-visibility>TBD</div>
+            </div>
+            <div class="detail">
+              <div class="title">Wind</div>
+              <div class="value" data-wind-speed>TBD</div>
+            </div>
+            <div class="detail">
+              <div class="title">Cloudiness</div>
+              <div class="value" data-cloudiness>TBD</div>
+            </div>
+          </div>
+        </div>
+        <!-- Current weather -->
+
+        <div class="date-container">
+          <div class="time" id="time">
+            00:19 <span id="am-pm">AM</span>
+          </div>
+          <div class="date" id="date">
+            Monday, 1 Aug
+          </div>
+        </div>
+        <!-- Date and Time -->
+      </div>
+    </div>
+
+    <div class="future-forecast">
+      <div class="today" id="current-temp">
+        <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon">
+        <div class="other">
+          <div class="day">Monday</div>
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">clear</div>
+        </div>
+      </div>
+      <div class="weather-forecast" id="weather-forecast">
+        <div class="weather-forecast-item" data-index="1">
+          <div class="day">Tue</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+        <div class="weather-forecast-item" data-index="2">
+          <div class="day">Wed</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+        <div class="weather-forecast-item" data-index="3">
+          <div class="day">Thu</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+        <div class="weather-forecast-item" data-index="4">
+          <div class="day">Fri</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+        <div class="weather-forecast-item" data-index="5">
+          <div class="day">Sat</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+        <div class="weather-forecast-item" data-index="6">
+          <div class="day">Sun</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+        <div class="weather-forecast-item" data-index="7">
+          <div class="day">Mon</div>
+          <img class="icon" src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-icon" width="100" height="100">
+          <div class="temp">25.21&#176; -
+            <span id="min-temp">25.21&#176;</span>
+          </div>
+          <div class="description">Clear</div>
+        </div>
+      </div>
+    </div>
+    <!-- Weather forecast -->
+  </div>
+  
+  <script src="https://kit.fontawesome.com/a37f060351.js" crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

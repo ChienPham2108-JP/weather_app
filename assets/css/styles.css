@@ -1,0 +1,335 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  background-image: url('../images/night/hanoi-night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+/* Search bar */
+.header {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header .city-search-container {
+  position: relative;
+  padding: 10px;
+  max-width: 90%;
+  margin: 0 70px;
+  padding: 20px 0;
+}
+
+.city-search-container .search-icon {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 11px;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+input[class="city-search"] {
+  width: 0;
+  max-width: 500px;
+  padding: 10px 0 10px 35px;
+  background-position: 10px 10px;
+  border: 2px solid #ccc;
+  outline: none;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 16px;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+  transition: width .5s ease;
+  background-color: transparent;
+  position: relative;
+  z-index: 21;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+input[class="city-search"]:focus {
+  width: 100%;
+}
+
+/* Content */
+.content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 70px 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 100;
+}
+
+/* Current weather */
+.current-weather-container {
+  min-width: 200px;
+}
+
+.general-information {
+  margin-bottom: 10px;
+}
+
+.general-information .status {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.general-information .location {
+  font-size: 25px;
+  font-weight: 200;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.detail-section {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(24, 24, 27, 0.6);
+}
+
+.detail-section .detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Date and Time */
+#time {
+  font-size: 70px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+
+}
+
+#am-pm {
+  font-size: 30px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+
+}
+#date {
+  font-size: 30px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+
+}
+
+/* Weather forecast */
+.future-forecast {
+  position: fixed;
+  overflow-x: auto;
+  width: 100%;
+  padding: 20px 25px;
+  background: rgba(24, 24, 27, 0.8);
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 100;
+}
+
+.future-forecast .today {
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  padding: 10px 35px 10px 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.future-forecast .other {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.today .other .day {
+  padding: 5px 15px;
+  border-radius: 50px;
+  text-align: center;
+  background: #3C3C44;
+}
+
+.today .other .temp {
+  font-size: 18px;
+  padding-top: 10px 15px;
+  text-align: center;
+}
+
+.weather-forecast {
+  display: flex;
+  gap: 20px;
+  padding-left: 10px;
+}
+.weather-forecast-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.weather-forecast-item .day {
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 400;
+  background: #3C3C44;
+}
+
+.description {
+  text-transform: capitalize;
+  width: 125px;
+  text-align: center;
+}
+
+#min-temp {
+  font-size: 12px;
+}
+
+/* For Tablet */
+@media only screen and (max-width: 1024px) {
+  .header .city-search-container {
+    margin: 0 auto;
+  }
+  .content {
+    padding: 20px 30px;
+  }
+  .general-information .status {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .general-information .location {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+  /* For mobile phones: */
+  @media only screen and (max-width: 740px) {
+    input[class="city-search"] {
+      width: 100%;
+    }
+
+    .content {
+      justify-content: center;
+      padding: 0 20px 20px;
+    }
+
+    .general-information .status {
+      font-size: 30px;
+      color: #fff;
+      font-weight: 400;
+    }
+    
+    .general-information .location {
+      font-size: 20px;
+      font-weight: 200;
+    }
+    
+    .date-container {
+      display: none;
+    }
+    
+    .future-forecast {
+      top: 330px;
+      width: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: auto;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: unset;
+      overflow-y: auto;
+      gap: 10px;
+    }
+
+    .future-forecast .today {
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid #eee;
+    }
+    
+    .weather-forecast {
+      flex-direction: column;
+      padding: 0;
+      gap: 10px;
+      width: 100%;
+    }
+
+    #current-temp img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .future-forecast .other {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .weather-forecast-item {
+      display: flex;
+      border: none;
+      border-bottom: 1px solid #eee;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5px 5px;
+    }
+
+    .weather-forecast-item img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .weather-forecast-item .day {
+      padding: 5px 10px;
+      border-radius: 50px;
+      width: 105px;
+      text-align: center;
+      align-items: center;
+      font-weight: 400;
+      background: #3C3C44;
+    }
+
+    .description {
+      display: none;
+    }
+  }
